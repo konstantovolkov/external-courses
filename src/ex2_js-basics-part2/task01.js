@@ -1,7 +1,8 @@
-use strict;
-var f = function(x) {
-    var type = typeof x;
-    switch(type) {
+'use strict';
+function f(x) {
+   // var type = typeof x;
+    switch(typeof x)
+    {
         case 'number':
             return x + ' is number';
             break;
@@ -10,4 +11,5 @@ var f = function(x) {
             break;
         default: return x + ' is undefined';
     }
-}
+};
+module.exports = f;
