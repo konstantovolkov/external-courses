@@ -2,8 +2,9 @@
 function checkArr(arr)
 {
     var result;
+    var i;
     result = '';
-    for (var i = 0; i < arr.length; i++)
+    for (i = 0; i < arr.length; i++)
     {
         result += arr[i] + ', ';
     }

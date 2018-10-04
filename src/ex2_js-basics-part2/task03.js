@@ -6,7 +6,8 @@ function countEvenOdd(arr)
     var cZero = 0;
     var resString;
     var resArr;
-    for (var i = 0; i < arr.length; i++) {
+    var i;
+    for (i = 0; i < arr.length; i++) {
         if (arr[i] !== 0) {
             if (arr[i] % 2 === 0) cEven++; else cOdd++;
         }

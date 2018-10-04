@@ -5,7 +5,7 @@ function isSimple(n){
     if (n > 1000){
         console.log('Данные неверны');
     } else{
-        while ((i*i <= n)  && (j !== 1)){
+        while ((i*i <= n) && (j !== 1)){
             if (n % i === 0){
                 j = 1;
             }
