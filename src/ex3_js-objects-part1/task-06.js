@@ -15,5 +15,4 @@ function deepClone(obj){
     }
     return clone;
 }
-deepClone({a: 1, b: {c: 0}, e: {f: [{g: 1}]}})
 module.exports = deepClone;
