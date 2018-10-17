@@ -2,33 +2,33 @@
 
 var Calculator = {
   
-  a: 0,
+  result: 0,
 
-    add: function f(b) {
-        if (b !== undefined) Calculator.a += b;
+    add: function f(x) {
+        (x === undefined) ? 0 : Calculator.result += x;
         return f
       },
 
-    subtract: function f(b) {
-        if (b !== undefined) Calculator.a -= b;
+    subtract: function f(x) {
+        (x === undefined) ? 0 : Calculator.result -= x;
         return f
       },
 
-    divide: function f(b) {
-        if (b === undefined) Calculator.a /= b;
+    divide: function f(x) {
+        (x === undefined) ? 0 : Calculator.result /= x;
         return f
       },
 
-    multiply: function f(b) {
-        if (b === undefined) Calculator.a *= b;
+    multiply: function f(x) {
+        (x === undefined) ? 0 : Calculator.result *= x;
         return f
       },
 
     getResult: function (){
-        return this.a
+        return this.result
       },
     reset: function () {
-        this.a = 0
-      },
+        this.result = 0
+    },
 };
 module.exports = Calculator
