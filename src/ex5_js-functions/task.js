@@ -5,22 +5,22 @@ var Calculator = {
   a: 0,
 
     add: function f(b) {
-        if (b !== undefined) Calculator.a += b;
+        (b === undefined) ? 0 : Calculator.a += b;
         return f
       },
 
     subtract: function f(b) {
-        if (b !== undefined) Calculator.a -= b;
+        (b === undefined) ? 0 : Calculator.a -= b;
         return f
       },
 
     divide: function f(b) {
-        if (b === undefined) Calculator.a /= b;
+        (b === undefined) ? 0 : Calculator.a /= b;
         return f
       },
 
     multiply: function f(b) {
-        if (b === undefined) Calculator.a *= b;
+        (b === undefined) ? 0 : Calculator.a *= b;
         return f
       },
 
@@ -29,6 +29,6 @@ var Calculator = {
       },
     reset: function () {
         this.a = 0
-      },
+    },
 };
 module.exports = Calculator
