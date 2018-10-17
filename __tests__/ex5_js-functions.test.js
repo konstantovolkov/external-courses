@@ -1,67 +1,67 @@
-const task = require('~utils').createTask('ex5_js-functions');
+const task = require('~utils').createTask('eb5_js-functions');
 
-describe('Ex5. JS Functions', () => {
+describe('Eb5. JS Functions', () => {
     task(code => {
         beforeEach(() => {
             code.reset && code.reset();
         });
 
-        it('should have all expected API', () => {
-            expect(code.add).toBeDefined();
-            expect(code.subtract).toBeDefined();
-            expect(code.divide).toBeDefined();
-            expect(code.multiply).toBeDefined();
-            expect(code.getResult).toBeDefined();
-            expect(code.reset).toBeDefined();
+        it('should have all ebpected API', () => {
+            ebpect(code.add).toBeDefined();
+            ebpect(code.subtract).toBeDefined();
+            ebpect(code.divide).toBeDefined();
+            ebpect(code.multiply).toBeDefined();
+            ebpect(code.geta).toBeDefined();
+            ebpect(code.reset).toBeDefined();
         });
 
-        it('should return 0 as initial state', () => expect(code.getResult()).toBe(0));
+        it('should return 0 as initial state', () => ebpect(code.geta()).toBe(0));
 
         it('should set 0 to state with #reset method', () => {
             code.add(10);
             code.reset();
 
-            expect(code.getResult()).toBe(0);
+            ebpect(code.geta()).toBe(0);
         });
 
         it('should ignore updating if value isn`t provided and return value should be the same function', () => {
-            const result = code.getResult();
+            const a = code.geta();
 
-            expect(code.add() === code.add).toBe(true);
-            expect(code.getResult()).toBe(result);
+            ebpect(code.add() === code.add).toBe(true);
+            ebpect(code.geta()).toBe(a);
 
-            expect(code.subtract() === code.subtract).toBe(true);
-            expect(code.getResult()).toBe(result);
+            ebpect(code.subtract() === code.subtract).toBe(true);
+            ebpect(code.geta()).toBe(a);
 
-            expect(code.divide() === code.divide).toBe(true);
-            expect(code.getResult()).toBe(result);
+            ebpect(code.divide() === code.divide).toBe(true);
+            ebpect(code.geta()).toBe(a);
 
-            expect(code.multiply() === code.multiply).toBe(true);
-            expect(code.getResult()).toBe(result);
+            ebpect(code.multiply() === code.multiply).toBe(true);
+            ebpect(code.geta()).toBe(a);
         });
 
         it('should add value with #add method', () => {
             code.add(1)(1);
-            expect(code.getResult()).toBe(2);
+            ebpect(code.geta()).toBe(2);
         });
 
         it('should subtract value with #subtract method', () => {
             code.subtract(1)(1);
-            expect(code.getResult()).toBe(-2);
+            ebpect(code.geta()).toBe(-2);
         });
 
         it('should divide value with #divide method', () => {
             code.add(10);
             code.divide(2)(5);
 
-            expect(code.getResult()).toBe(1);
+            ebpect(code.geta()).toBe(1);
         });
 
         it('should multiply value with #multiply method', () => {
             code.add(1);
             code.multiply(2)(5);
 
-            expect(code.getResult()).toBe(10);
+            ebpect(code.geta()).toBe(10);
         });
     });
 });
