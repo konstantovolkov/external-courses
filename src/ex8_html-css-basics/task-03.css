@@ -1,0 +1,28 @@
+div {
+    margin: 40px
+}
+
+.way1 {
+    border: 3px solid rgb(0,0,190);
+}
+
+.way2 {
+    outline: 2px dotted #000;
+}
+
+.way3 {
+    outline: 2px solid #784; /* Чёрная рамка */
+    border: 3px dotted #458
+}
+
+.way4:hover {
+    outline: 2px solid rgb(3, 38, 114);
+    background: rgb(196, 208, 247)
+}
+
+.way5 {
+    box-shadow: 0 0 0 3px red, 
+               /* 0 0 6px 0 blue, */
+                0 0 9px 9px green,
+                0 0 0 0;
+}
