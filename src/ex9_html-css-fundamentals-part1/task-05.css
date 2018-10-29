@@ -1,0 +1,61 @@
+body {
+    margin: 30px;
+}
+
+div {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(70, 226, 140);
+}
+
+.block1 {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(136, 255, 189);
+}
+
+.block2 {
+    position: absolute;
+    background-color: rgb(112, 245, 172);
+    bottom: 5px;
+    right: 5px;
+}
+
+.block3 {
+    position: absolute;
+    background-color: rgb(70, 226, 140);
+    bottom: 5px;
+    right: 5px;
+}
+
+.shadow {
+    box-shadow: 5px 5px 0 0 rgb(112, 245, 172),
+                10px 10px 0 0 rgb(136, 255, 189);
+}
+
+.pseudo {
+    position: relative;
+}
+
+.pseudo::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(112, 245, 172);
+    top: 5px;
+    left: 5px;
+    z-index: -100;
+    width: 300px;
+    height: 200px;
+}
+
+.pseudo::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(136, 255, 189);
+    top: 10px;
+    left: 10px;
+    z-index: -200;
+    width: 300px;
+    height: 200px;
+}
