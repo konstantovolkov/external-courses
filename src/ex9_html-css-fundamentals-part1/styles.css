@@ -34,6 +34,14 @@ textarea {
     vertical-align: top;
 }
 
+input::-webkit-input-placeholder {
+    color: #ebe1e1;
+}
+
+input::-moz-placeholder {
+    color: #ebe1e1;
+}
+
 .field {
     padding: 3px 5px;
     border: 1px solid rgb(165, 157, 157);
@@ -41,8 +49,8 @@ textarea {
     background-color: #fcfcfc;
     resize: none;
     font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: #ebe1e1;
 }
+
 
 .button {
     border-radius:  6px;
