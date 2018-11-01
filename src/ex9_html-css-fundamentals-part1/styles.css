@@ -1,0 +1,85 @@
+h3 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin: 0px;
+}
+
+#under-header {
+    font: 10px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0px;
+    color: red;
+}
+
+hr {
+    border: none;
+    color: black;
+    background-color: black;
+    height: 2px;
+}
+
+p{
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+label, input {
+   display: inline-block;
+}
+
+label {
+    width: 100px;
+    align-content: space-between
+}
+
+textarea {
+    width: 200px;
+    vertical-align: top;
+}
+
+input::-webkit-input-placeholder {
+    color: #ebe1e1;
+}
+
+input::-moz-placeholder {
+    color: #ebe1e1;
+}
+
+.field {
+    padding: 3px 5px;
+    border: 1px solid rgb(165, 157, 157);
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    resize: none;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+.button {
+    border-radius:  6px;
+    padding: 3px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #f8f8f8;
+    border-style: solid;
+    margin-left: 75px;
+}
+
+
+span.hint{
+	display:inline-block;
+	position: relative;
+	background-color: rgb(252, 90, 90);
+    padding: 1px 10px;
+    margin-left: 30px;
+	color:#fff;
+	text-align: center;
+}
+ 
+span.hint:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+    border: 5px solid;
+    border-right-color: rgb(252, 90, 90);
+    top: 50%;
+	right: 100%;
+	margin-top: -5px
+}
