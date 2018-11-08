@@ -1,0 +1,6 @@
+#circled {
+    /*clip-path: circle(35% at 50% 50%);*/
+    width: 405px;
+    height: 405px;
+    -webkit-mask-image: url(mask.png);
+}
