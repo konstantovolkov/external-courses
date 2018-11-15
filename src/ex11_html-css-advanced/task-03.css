@@ -33,13 +33,6 @@ input:focus + label {
     color:rgb(47, 115, 218); 
 }
 
-[placeholder="Title"]{
-    width:190%;
-}
-[placeholder="Description"]{
-    width:190%;
-}
-
 table{
     border-collapse: collapse;
     border:2px solid white;
