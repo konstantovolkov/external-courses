@@ -260,7 +260,8 @@ p {
         border-top: 1px solid #eceef4;
     }
 
-    nav span {
+    nav li {
+        display: inline-block;
         overflow-wrap: normal;
         border-right: 1px solid #eceef4;
         color: #6d6e71;
@@ -268,28 +269,38 @@ p {
         font-size: 13px;
         font-weight: 700;
         text-align: center;
-        padding-top: 20px;
+        list-style-type: none;
+        padding-top: 22px;
+        padding-bottom: 20px;
     }
-    nav :first-child{
+    nav li:first-child{
         color:  #1faae2;
+    }
+
+    nav li:hover {
         background-image: url(images/active.png);
         background-repeat: no-repeat;
         background-position: center bottom; 
+        cursor: pointer;
     }
     
-    nav :last-child {
+    nav ul:last-child {
         border-right: none;
     }
     
-    nav {
+    nav{
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 5;
         grid-row-end: 6;
-        
+    }
+    
+    ul{
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, minmax(50px, auto)) 13%; 
+        padding: 0;
+        margin: 0;
     }
 
     .content {
