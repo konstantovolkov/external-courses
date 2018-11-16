@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('ProximaNova-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 100vh; 
+    grid-template-columns: 200px 1fr;
+}
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background: #1f2637;
+    display: grid;
+    grid-template-rows: 13% 28% 20% 1fr;
+    grid-gap: 4px;
+    color: #78829d;
+    font-family: "Proxima Nova";
+    font-size: 13px;
+}
+.add {
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #141824;
+}
+.add button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #f2795a;
+    width: 160px;
+    height: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    font-weight: 700;
+}
+nav, .categories {
+    grid-row: 2 / 3; 
+    display: grid;
+    border-bottom: 1px solid #141824;
+    border-top: 1px solid #293146;
+}
+a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:20px; 
+}
+a:hover {
+    background-color: #15a4fa;
+    color: white;
+}
+#reading::before {
+    content: url(images/reading.png);
+}
+#browse::before{
+    content: url(images/browse.png);
+}
+#buy::before{
+    content: url(images/buy.png);
+}
+#fav::before{
+    content: url(images/fav.png)
+}
+#wish::before{
+    content: url(images/wish.png)
+}
+#history::before{
+    content: url(images/history.png)
+}
+#must-read::before{
+    content: url(images/circle-1.png)
+}
+#best::before{
+    content: url(images/circle-2.png)
+}
+#classic:before{
+    content: url(images/circle-3.png)
+}
+#non-fiction::before{
+    content: url(images/circle-4.png)
+}
+
+.categories {
+    grid-row: 3 / 4;  
+}
+.log {
+    grid-row: 4 / 5;
+    border-top: 1px solid #293146;
+}
+.wrapper {
+    padding: 20px;
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-columns: 23px 1fr;
+}
+.img:before{
+    content: url(images/history.png);
+    grid-column: 1 / 2;
+}
+.record,.time {
+    margin-top: 0;
+    grid-column: 2 / 3;
+}
+
+.highlighted {
+    color: #9ca5be;
+}
