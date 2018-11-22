@@ -1,0 +1,24 @@
+body{
+    background: rgb(238, 238, 238);
+}
+#container{
+    margin: 20px;
+}
+article {
+    font-family: 'Courier New', Courier, monospace;
+    width: 500px;
+}
+article p {
+    display: none;
+}
+article.open p {
+    display: block;
+    background: rgb(255, 255, 255);
+    padding: 5px;
+}
+h3 {
+    cursor: pointer;
+    background: rgb(110, 0, 0);
+    color: white;
+    padding: 5px;
+}
