@@ -1,38 +1,33 @@
 var listOfElements = {};
 var listOfClasses = {};
 var textNodes = 0;
-const tag = 1;
-const text = 3;
 
-function countElements(element) {
+function count(element, classNum) {
     if (element.tagName in listOfElements) {
         listOfElements[element.tagName]++;
     } else {
         listOfElements[element.tagName] = 1;
     }
-}
-
-function countClasses(element, classNum) {
-    if (element.classList[classNum] in listOfClasses) {
-        listOfClasses[element.classList[classNum]]++;
-    } else {
-        listOfClasses[element.classList[classNum]] = 1;
+    if (element.className !== '') {
+        for (let i = 0; i < element.classList.length; i++){
+            if (element.classList[i] in listOfClasses) {
+                listOfClasses[element.classList[i]]++;
+            } else {
+                listOfClasses[element.classList[i]] = 1;
+            }
+        }
     }
-}
+}  
 
 function scanDOM(element) {
 
     if (element.hasChildNodes()) {
         for (var i = 0; i < element.childNodes.length; i++) {
             var child = element.childNodes[i];
-            if (child.nodeType === tag) {
-                countElements(child);
-                if (child.className !== '') {
-                    for (let i = 0; i < child.classList.length; i++){
-                        countClasses(child, i);
-                    }
-                }
-            } else if (child.nodeType === text) {
+            
+            if (child.nodeType === 1) {
+                count(child);
+            } else if (child.nodeType === 3) {
                 textNodes++;
             }
         }
