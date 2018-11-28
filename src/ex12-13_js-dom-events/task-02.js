@@ -8,7 +8,7 @@ var container = document.getElementById('container');
                     show(target);
                     return;
                 }
-                target = target.parentNode;
+                target = target.closest('ARTICLE');
             }
         }
 
