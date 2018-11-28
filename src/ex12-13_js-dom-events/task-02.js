@@ -4,7 +4,7 @@ var container = document.getElementById('container');
         container.onclick = function(event) {
             var target = event.target;
             while (target != container) {
-                if (target.tagName == 'H3') {
+                if (target.tagName == 'ARTICLE') {
                     show(target);
                     return;
                 }
@@ -14,8 +14,8 @@ var container = document.getElementById('container');
 
         function show(node) {
             if (selArt) {
-                selArt.parentNode.classList.remove('open')
+                selArt.classList.remove('open')
             }
             selArt = node;
-            selArt.parentNode.classList.add('open')
+            selArt.classList.add('open')
         }
