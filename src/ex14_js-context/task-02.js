@@ -38,18 +38,19 @@ function Hangman(word) {
     };
     this.getGuessedString = function () {
         console.log(this.guessed.join(''));
-        return this;
+        return this.guessed.join('');
     };
     this.getErrorsLeft = function () {
         console.log(this.errorsLeft);
-        return this;
+        return this.errorsLeft;
     };
     this.getWrongSymbols = function () {
         console.log(this.wrongSymbols);
-        return this;
+        return this.wrongSymbols;
     };
     this.getStatus = function () {
         console.log(this.guessed.join('') + ' | ' + 'errors left' + this.errorsLeft);
+        return this.guessed.join('') + ' | ' + 'errors left' + this.errorsLeft;
     };
     this.startAgain = function (newWord) {
         this.word = newWord.toLowerCase();
@@ -59,7 +60,8 @@ function Hangman(word) {
         this.result = '';
         for (var i = 0; i < this.word.length; i++) {
             this.guessed[i] = '_'
-        }
+        };
+        return this;
     }
 };
-module.exports = new Hangman;
+module.exports = new Hangman('');
