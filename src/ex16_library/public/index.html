@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 04</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+
+    <template id="book-tpl">
+        <div class="book">
+            <div class="book-image">
+                <img src="images/book-cover.png">
+            </div>
+            <div class="book-fields">
+                <h3 class="book-title">{{title}}</h3>
+                <div class="book-author">{{author}}</div>
+                <!--<div class="book-description">{{description}}</div>-->
+                <div class="book-rating"></div>
+            </div>
+        </div>
+    </template>
+</head>
+<body>
+    <div class="book-form" id="book-form">
+        <div class="form-wrapper">
+            <a href="#close" title="Закрыть" class="close">Close</a>
+            <h2>Add a book</h2>       
+            <form name="book" id="form">
+                <p>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                </p>
+                <p>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                </p>
+                <p>
+                    <label for="rating">Rating:</label>
+                    <input type="text" id="rating" name="rating">
+                </p>
+                <input type="submit" value="add book" id="add">
+            </form>
+        </div>
+    </div>
+    <header class="app-header">
+        <div class="menu-help">Help Center</div>
+        <div class="menu-support">Our Support</div>
+        <div class="profile">John Doe</div>
+    </header>
+    <aside class="sidebar">
+        <div class="add">
+            <a href="#book-form" class="btn">+&#8195;ADD A BOOK</a>
+        </div>
+        <nav class="main-navigation">
+            <a id="reading">&#8195;Now Reading</a>
+            <a id="browse">&#8195;Browse</a>
+            <a id="buy">&#8195;Buy Books</a>
+            <a id="fav">&#8195;Favourite Books</a>
+            <a id="wish">&#8195;Wishlist</a>
+            <a id="history">&#8195;History</a>
+        </nav>
+        <div class="categories">
+            <a id="must-read">&#8195;&#160;Must Read Titles</a>
+            <a id="best">&#8195;&#160;Best Of List</a>
+            <a id="classic">&#8195;&#160;Classic Novels</a>
+            <a id="non-fiction">&#8195;&#160;Non Fiction</a>
+        </div>
+        <div class="log">
+            <div class="wrapper">
+                <span class="img"></span><p class="record">You added <span class="highlighted">Fight Club</span> by
+                <span class="highlighted">Chuck Palanick</span> to your
+                <span class="highlighted">Must Read Titles</span></p>
+                <p class="time">24 minutes ago</p>
+            </div>
+            <div class="wrapper">
+                <span class="img"></span><p class="record">You added <span class="highlighted">The Trial</span> by
+                <span class="highlighted">Franz Kafka</span> to your 
+                <span class="highlighted">Must Read Titles</span></p>
+                <p class="time">48 minutes ago</p>
+            </div>
+        </div>   
+    </aside>
+    <div class="page-wrapper">
+        <header class="panel">
+            <div class="top-panel"><h1>Browse Available Books</h1></div>
+            <nav class="filter">
+                <a id="all">All Books</a>
+                <a id="recent">Most Recent</a>
+                <a id="popular">Most Popular</a>
+                <a id="free">Free Books</a>
+                <input type="text" placeholder="Enter Keywrods">
+            </nav>
+        </header>
+
+        <main>
+            <div id="books-list"> </div>
+        </main>
+
+    </div>
+    <footer>
+        <div class="help-btn"></div>
+        <div class="settings-btn"></div>
+    </footer>
+    <script src="js/EventEmitter.js"></script>
+    <script src="js/Model.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/View.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
