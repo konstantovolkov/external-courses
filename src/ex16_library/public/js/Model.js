@@ -10,24 +10,24 @@ Model.prototype.loadBooks = function() {
         }
     }).then((data) => {
         this.books = data.payload;
-        console.log(this.books);
+        this.onAddBook.notify(this.books);
     }); 
 }
 
 Model.prototype.add = function (book) {
-    /*fetch('/api/books', {
+    fetch('/api/books/addBook', {
         method: 'POST',
-        body: JSON.stringify({
-            title: book.title,
-            author: book.author,
-            rating: book.rating,
-        }),
-    })*/
-    this.books = this.books.concat(book);
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ book }),
+    })//.then(response => response.json()).then(result => {
+       // console.log(result);
+     //.then( res => {})
     this.onAddBook.notify(this.books);
 }
 
-Model.prototype.init = function (initialBooks) {
-    this.books = this.books.concat(initialBooks);
+Model.prototype.init = function () {
+    this.books = this.books.concat();
     this.onAddBook.notify(this.books);
 }

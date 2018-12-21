@@ -17,6 +17,13 @@ router.get('/', (req, res) => {
     res.json({ payload: BOOKS });
 });
 
+router.post('/addBook/', (req, res) => {
+    var book = req.body.book;
+    book.id = BOOKS[BOOKS.length - 1].id + 1
+    BOOKS.push(book);
+    res.json({});
+});
+
 router.get('/:id', (req, res) => {
     const { id } = req.params;
 

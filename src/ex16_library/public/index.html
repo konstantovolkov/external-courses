@@ -22,11 +22,11 @@
     </template>
 </head>
 <body>
-    <div class="book-form" id="book-form">
+    <div id="form-container" class="book-form">
         <div class="form-wrapper">
             <a href="#close" title="Закрыть" class="close">Close</a>
             <h2>Add a book</h2>       
-            <form name="book" id="form">
+            <form name="book" id="book-form">
                 <p>
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title">
@@ -39,6 +39,10 @@
                     <label for="rating">Rating:</label>
                     <input type="text" id="rating" name="rating">
                 </p>
+                <p>
+                    <label for="file">Append file:</label>
+                    <input type="file" id="file" name="file">
+                </p>
                 <input type="submit" value="add book" id="add">
             </form>
         </div>
@@ -50,7 +54,7 @@
     </header>
     <aside class="sidebar">
         <div class="add">
-            <a href="#book-form" class="btn">+&#8195;ADD A BOOK</a>
+            <a href="#form-container" class="btn">+&#8195;ADD A BOOK</a>
         </div>
         <nav class="main-navigation">
             <a id="reading">&#8195;Now Reading</a>

@@ -9,14 +9,15 @@ Controller.prototype.addBook = function () {
     var book = {
         title: formData.get('title'),
         author: formData.get('author'),
-        rating: formData.get('rating'),        
+        rating: formData.get('rating'),
+        //cover: formData.get('file'),        
     };
-    //this.view.closeModal();
     this.model.add(book);
+    this.model.loadBooks();
 }
 
 Controller.prototype.start = function () {
     this.model.loadBooks();
-    this.model.init(this.model.books);
+    //this.model.init(this.model.books);
     this.view.init();
 }

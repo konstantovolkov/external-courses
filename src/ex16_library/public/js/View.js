@@ -1,12 +1,10 @@
-
-
 function View(model, controller) {
     this.model = model;
     this.ctrl = controller;
 
     this.bookList = document.getElementById('books-list')
-    this.form = document.getElementById('form');
-    this.modal = document.getElementById('book-form');
+    this.form = document.getElementById('book-form');
+    //this.form.file.addEventListener('change', (event) => {});
 }
 
 View.prototype.init = function () {
@@ -55,7 +53,3 @@ View.prototype.renderBooks = function (books) {
     })
     
 }
-/*
-View.prototype.closeModal = function () {
-    this.modal:target = 'none';
-}*/
